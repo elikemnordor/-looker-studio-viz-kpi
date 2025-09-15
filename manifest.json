@@ -6,8 +6,8 @@
   "devMode": true,
   "resources": [
     { "type": "js", "url": "https://unpkg.com/@google/dscc" },
-    { "type": "css", "url": "https://YOUR-PROJECT.pages.dev/index.css?v=1" },
-    { "type": "js", "url": "https://YOUR-PROJECT.pages.dev/index.js?v=1" }
+    { "type": "css", "url": "https://looker-studio-viz-kpi.pages.dev/index.css?v=1" },
+    { "type": "js", "url": "https://looker-studio-viz-kpi.pages.dev/index.js?v=1" }
   ],
   "components": [
     {
