@@ -3,7 +3,7 @@
   "description": "A minimal KPI Community Visualization for Looker Studio (dev build).",
   "organization": "Your Org",
   "organizationUrl": "https://example.com",
-  "logoUrl": "https://raw.githubusercontent.com/your-username/your-repo/main/icon.png",
+  "logoUrl": "https://elikemnordor.github.io/-looker-studio-viz-kpi/icon.png",
   "devMode": true,
   "resources": [
     {
@@ -12,11 +12,11 @@
     },
     {
       "type": "css",
-      "url": "https://your-username.github.io/your-repo/index.css"
+      "url": "https://elikemnordor.github.io/-looker-studio-viz-kpi/index.css?v=1"
     },
     {
       "type": "js",
-      "url": "https://your-username.github.io/your-repo/index.js"
+      "url": "https://elikemnordor.github.io/-looker-studio-viz-kpi/index.js?v=1"
     }
   ],
   "components": [
@@ -24,7 +24,7 @@
       "id": "simple_kpi",
       "name": "Simple KPI",
       "description": "Displays a single metric and optional label.",
-      "iconUrl": "https://raw.githubusercontent.com/your-username/your-repo/main/icon.png",
+      "iconUrl": "https://elikemnordor.github.io/-looker-studio-viz-kpi/icon.png",
       "data": {
         "maxDataPoints": 5000,
         "dimensions": [
