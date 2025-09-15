@@ -1,0 +1,43 @@
+{
+  "name": "Simple KPI (Dev)",
+  "description": "A minimal KPI Community Visualization for Looker Studio (dev build).",
+  "organization": "Your Org",
+  "organizationUrl": "https://example.com",
+  "logoUrl": "https://raw.githubusercontent.com/your-username/your-repo/main/icon.png",
+  "devMode": true,
+  "resources": [
+    {
+      "type": "js",
+      "url": "https://unpkg.com/@google/dscc"
+    },
+    {
+      "type": "css",
+      "url": "https://your-username.github.io/your-repo/index.css"
+    },
+    {
+      "type": "js",
+      "url": "https://your-username.github.io/your-repo/index.js"
+    }
+  ],
+  "components": [
+    {
+      "id": "simple_kpi",
+      "name": "Simple KPI",
+      "description": "Displays a single metric and optional label.",
+      "iconUrl": "https://raw.githubusercontent.com/your-username/your-repo/main/icon.png",
+      "data": {
+        "maxDataPoints": 5000,
+        "dimensions": [
+          { "id": "dimension", "name": "Label (optional)" }
+        ],
+        "metrics": [
+          { "id": "metric", "name": "Metric (required)" }
+        ]
+      },
+      "options": [
+        { "id": "textColor", "name": "Text Color", "type": "COLOR", "defaultValue": "#1f77b4" },
+        { "id": "fontSize", "name": "Font Size (px)", "type": "NUMBER", "defaultValue": 36, "min": 10, "max": 120, "step": 1 }
+      ]
+    }
+  ]
+}
