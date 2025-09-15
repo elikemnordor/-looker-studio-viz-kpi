@@ -3,7 +3,6 @@
   "description": "A minimal KPI Community Visualization for Looker Studio (dev build).",
   "organization": "Your Org",
   "organizationUrl": "https://example.com",
-  "logoUrl": "https://elikemnordor.github.io/-looker-studio-viz-kpi/icon.png",
   "devMode": true,
   "resources": [
     {
