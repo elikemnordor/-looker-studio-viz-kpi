@@ -1,7 +1,7 @@
 {
   "name": "Simple KPI (Dev)",
-  "description": "A minimal KPI Community Visualization for Looker Studio (dev build).",
-  "organization": "Your Org",
+  "description": "Minimal KPI Community Visualization (dev).",
+  "organization": "Dev",
   "organizationUrl": "https://example.com",
   "devMode": true,
   "resources": [
@@ -23,7 +23,6 @@
       "id": "simple_kpi",
       "name": "Simple KPI",
       "description": "Displays a single metric and optional label.",
-      "iconUrl": "https://elikemnordor.github.io/-looker-studio-viz-kpi/icon.png",
       "data": {
         "maxDataPoints": 5000,
         "dimensions": [
