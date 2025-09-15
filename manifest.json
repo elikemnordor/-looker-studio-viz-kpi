@@ -5,18 +5,9 @@
   "organizationUrl": "https://example.com",
   "devMode": true,
   "resources": [
-    {
-      "type": "js",
-      "url": "https://unpkg.com/@google/dscc"
-    },
-    {
-      "type": "css",
-      "url": "https://elikemnordor.github.io/-looker-studio-viz-kpi/index.css?v=1"
-    },
-    {
-      "type": "js",
-      "url": "https://elikemnordor.github.io/-looker-studio-viz-kpi/index.js?v=1"
-    }
+    { "type": "js", "url": "https://unpkg.com/@google/dscc" },
+    { "type": "css", "url": "https://cdn.jsdelivr.net/gh/elikemnordor/-looker-studio-viz-kpi@main/index.css?v=1" },
+    { "type": "js",  "url": "https://cdn.jsdelivr.net/gh/elikemnordor/-looker-studio-viz-kpi@main/index.js?v=1" }
   ],
   "components": [
     {
@@ -25,12 +16,8 @@
       "description": "Displays a single metric and optional label.",
       "data": {
         "maxDataPoints": 5000,
-        "dimensions": [
-          { "id": "dimension", "name": "Label (optional)" }
-        ],
-        "metrics": [
-          { "id": "metric", "name": "Metric (required)" }
-        ]
+        "dimensions": [{ "id": "dimension", "name": "Label (optional)" }],
+        "metrics": [{ "id": "metric", "name": "Metric (required)" }]
       },
       "options": [
         { "id": "textColor", "name": "Text Color", "type": "COLOR", "defaultValue": "#1f77b4" },
