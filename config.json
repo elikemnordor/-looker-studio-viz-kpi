@@ -1,0 +1,22 @@
+{
+  "data": [
+    {
+      "id": "concepts",
+      "label": "Fields",
+      "elements": [
+        { "id": "dimension", "label": "Label (optional)", "type": "DIMENSION", "options": { "min": 0, "max": 1 } },
+        { "id": "metric", "label": "Metric (required)", "type": "METRIC", "options": { "min": 1, "max": 1 } }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "text",
+      "label": "Text",
+      "elements": [
+        { "type": "FONT_COLOR", "id": "textColor", "label": "Text Color", "defaultValue": "#1f77b4" },
+        { "type": "FONT_SIZE", "id": "fontSize", "label": "Font Size", "defaultValue": 36 }
+      ]
+    }
+  ]
+}
