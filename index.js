@@ -13,7 +13,6 @@ function ensureRoot() {
 
 function formatNumber(value) {
   if (value == null || value === '' || isNaN(Number(value))) return '-';
-  // Simple formatter; replace with Intl.NumberFormat as needed
   const num = Number(value);
   if (Math.abs(num) >= 1_000_000_000) return (num / 1_000_000_000).toFixed(2) + 'B';
   if (Math.abs(num) >= 1_000_000) return (num / 1_000_000).toFixed(2) + 'M';
@@ -28,33 +27,29 @@ function draw(data) {
   const container = document.createElement('div');
   container.className = 'kpi-container';
 
-  // Read style controls (with defaults)
+  // Style (object format: style.{id}.value.{...})
   const style = data.style || {};
-  const textColor = style.textColor || '#1f77b4';
-  const fontSize = Number(style.fontSize || 36);
+  const textColor = (style.textColor && style.textColor.value && style.textColor.value.color) || '#1f77b4';
+  const fontSize = (style.fontSize && style.fontSize.value) || 36;
 
-  // Extract fields
-  const hasRows = data.tables && data.tables.DEFAULT && data.tables.DEFAULT.length > 0;
-  const row = hasRows ? data.tables.DEFAULT[0] : null;
-
-  // Identify metric and dimension fields by ID from manifest
-  const metricFieldId = 'metric';
-  const dimensionFieldId = 'dimension';
+  // Data (object format)
+  // Expect data.tables.DEFAULT to be an array of row objects keyed by IDs from config.json
+  const rows = (data.tables && data.tables.DEFAULT) || [];
+  const row = rows[0] || null;
+  const dimId = 'dimension';
+  const metId = 'metric';
 
   let labelText = '';
   let valueText = '-';
 
   if (row) {
-    // Find dimension cell
-    if (row[dimensionFieldId] != null && row[dimensionFieldId] !== '') {
-      labelText = String(row[dimensionFieldId]);
+    if (row[dimId] != null && row[dimId] !== '') {
+      labelText = String(row[dimId]);
     }
-    // Find metric cell
-    const metricVal = row[metricFieldId];
+    const metricVal = row[metId];
     valueText = formatNumber(metricVal);
   }
 
-  // Optional label
   if (labelText) {
     const labelEl = document.createElement('div');
     labelEl.className = 'kpi-label';
@@ -62,7 +57,6 @@ function draw(data) {
     container.appendChild(labelEl);
   }
 
-  // Value
   const valueEl = document.createElement('div');
   valueEl.className = 'kpi-value';
   valueEl.textContent = valueText;
@@ -73,6 +67,8 @@ function draw(data) {
   root.appendChild(container);
 }
 
-// Subscribe to updates using the legacy dscc API
-// tableTransform gives rows keyed by component IDs (metric/dimension)
-dscc.subscribeToData(draw, { transform: dscc.tableTransform });
+// IMPORTANT: use objectTransform, not tableTransform
+function init() {
+  dscc.subscribeToData(draw, { transform: dscc.objectTransform });
+}
+init();
