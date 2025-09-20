@@ -1,1 +1,21 @@
-{ "name": "Simple KPI (Dev)", "description": "Minimal KPI Community Visualization (dev).", "organization": "Dev", "organizationUrl": "https://example.com", "devMode": true, "resources": [ { "type": "js", "url": "https://unpkg.com/@google/dscc" }, { "type": "css", "url": "https://looker-studio-viz-kpi.pages.dev/index.css?v=1" }, { "type": "js", "url": "https://looker-studio-viz-kpi.pages.dev/index.js?v=1" } ], "components": [ { "id": "simple_kpi", "name": "Simple KPI", "description": "Displays a single metric and optional label.", "data": { "maxDataPoints": 5000, "dimensions": [{ "id": "dimension", "name": "Label (optional)" }], "metrics": [{ "id": "metric", "name": "Metric (required)" }] }, "options": [ { "id": "textColor", "name": "Text Color", "type": "COLOR", "defaultValue": "#1f77b4" }, { "id": "fontSize", "name": "Font Size (px)", "type": "NUMBER", "defaultValue": 36, "min": 10, "max": 120, "step": 1 } ] } ] }
+{
+  "name": "Simple KPI (Dev)",
+  "logoUrl": "https://looker-studio-viz-kpi.pages.dev/icon.png",
+  "organization": "Cloudflare Pages Viz",
+  "organizationUrl": "https://looker-studio-viz-kpi.pages.dev",
+  "description": "Minimal KPI Community Visualization (dev).",
+  "devMode": true,
+  "components": [
+    {
+      "id": "simple_kpi",
+      "name": "Simple KPI",
+      "iconUrl": "https://looker-studio-viz-kpi.pages.dev/icon.png",
+      "description": "Displays a single metric and optional label.",
+      "resource": {
+        "js": "https://looker-studio-viz-kpi.pages.dev/bundle.js?v=1",
+        "config": "https://looker-studio-viz-kpi.pages.dev/config.json?v=1",
+        "css": "https://looker-studio-viz-kpi.pages.dev/index.css?v=1"
+      }
+    }
+  ]
+}
