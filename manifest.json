@@ -1,6 +1,5 @@
 {
   "name": "Simple KPI (Dev)",
-  "logoUrl": "https://looker-studio-viz-kpi.pages.dev/icon.png",
   "organization": "Cloudflare Pages Viz",
   "organizationUrl": "https://looker-studio-viz-kpi.pages.dev",
   "description": "Minimal KPI Community Visualization (dev).",
