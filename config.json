@@ -1,0 +1,15 @@
+{
+  "data": {
+    "metrics": [
+      { "id": "metric", "name": "Metric (required)", "min": 1, "max": 1 }
+    ],
+    "dimensions": [
+      { "id": "dimension", "name": "Label (optional)", "min": 0, "max": 1 }
+    ]
+  },
+  "style": [
+    { "id": "textColor", "name": "Text Color", "type": "COLOR", "defaultValue": "#1f77b4" },
+    { "id": "fontSize", "name": "Font Size (px)", "type": "NUMBER", "defaultValue": 36, "min": 10, "max": 120, "step": 1 }
+  ],
+  "maxDataPoints": 5000
+}
