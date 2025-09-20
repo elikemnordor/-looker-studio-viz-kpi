@@ -1,5 +1,5 @@
 /*
-  Access-Control-Allow-Origin: https://lookerstudio.google.com
+  Access-Control-Allow-Origin: *
   Access-Control-Allow-Methods: GET, HEAD, OPTIONS
   Access-Control-Allow-Headers: Content-Type
   Cache-Control: public, max-age=600
