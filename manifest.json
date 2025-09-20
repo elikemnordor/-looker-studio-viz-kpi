@@ -4,38 +4,16 @@
   "organization": "Cloudflare Pages Viz",
   "organizationUrl": "https://looker-studio-viz-kpi.pages.dev",
   "devMode": true,
-  "resources": [
-    {
-      "type": "js",
-      "url": "https://cdn.jsdelivr.net/npm/@google/dscc@0.3.22/_bundles/dscc.min.js"
-    },
-    {
-      "type": "css",
-      "url": "https://looker-studio-viz-kpi.pages.dev/index.css?v=2"
-    },
-    {
-      "type": "js",
-      "url": "https://looker-studio-viz-kpi.pages.dev/index.js?v=2"
-    }
-  ],
   "components": [
     {
       "id": "simple_kpi",
       "name": "Simple KPI",
       "description": "Displays a single metric and optional label.",
-      "data": {
-        "maxDataPoints": 5000,
-        "dimensions": [
-          { "id": "dimension", "name": "Label (optional)" }
-        ],
-        "metrics": [
-          { "id": "metric", "name": "Metric (required)" }
-        ]
-      },
-      "options": [
-        { "id": "textColor", "name": "Text Color", "type": "COLOR", "defaultValue": "#1f77b4" },
-        { "id": "fontSize", "name": "Font Size (px)", "type": "NUMBER", "defaultValue": 36, "min": 10, "max": 120, "step": 1 }
-      ]
+      "resource": {
+        "js": "https://looker-studio-viz-kpi.pages.dev/boot.js?v=1",
+        "config": "https://looker-studio-viz-kpi.pages.dev/config.json?v=1",
+        "css": "https://looker-studio-viz-kpi.pages.dev/index.css?v=2"
+      }
     }
   ]
 }
